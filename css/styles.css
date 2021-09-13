@@ -19,9 +19,22 @@ body {
 }
 
 .card {
+  position: relative;
   background: #ffffff;
   border-radius: 2rem;
   max-width: 56rem;
+}
+
+.card-image-mobile {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 14.4rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
 }
 
 .card-box {
@@ -29,6 +42,7 @@ body {
 }
 
 .card-image img {
+  display: none;
   width: 100%;
   height: auto;
   max-width: 25rem;
@@ -36,7 +50,6 @@ body {
 
 @media (min-width: 56em) {
   .card {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -46,6 +59,9 @@ body {
     background-size: 45%;
     background-repeat: no-repeat;
     background-position: -13% center;
+  }
+  .card-image-mobile {
+    display: none;
   }
   .card-box {
     display: block;
@@ -72,6 +88,7 @@ body {
     overflow: hidden;
   }
   .card-image img {
+    display: block;
     -webkit-transform: translateX(-4rem);
             transform: translateX(-4rem);
   }
