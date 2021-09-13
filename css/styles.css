@@ -12,7 +12,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 3rem;
+  padding: 10rem 1rem;
   font-family: 'Kumbh Sans', sans-serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(180deg, #af67e9, #6565e7);
@@ -22,29 +22,53 @@ body {
   background: #ffffff;
   border-radius: 2rem;
   max-width: 56rem;
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 15rem;
 }
 
 .card-box {
   display: none;
 }
 
-.card-image img {
+.card-image {
+  position: relative;
+}
+
+.card-image-desktop {
+  display: none;
+}
+
+.card-image-mobile {
+  position: absolute;
+  top: -6.2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
   width: 100%;
+  max-width: 15rem;
   height: auto;
-  max-width: 25rem;
+}
+
+.card-text {
+  padding-top: 7rem;
 }
 
 @media (min-width: 56em) {
+  body {
+    padding: 10rem;
+  }
   .card {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 6rem auto;
+    margin: 0 auto;
     padding-right: 2rem;
     background-image: url("../images/bg-pattern-desktop.svg");
     background-size: 45%;
-    background-repeat: no-repeat;
     background-position: -13% center;
   }
   .card-box {
@@ -71,9 +95,20 @@ body {
             align-items: center;
     overflow: hidden;
   }
-  .card-image img {
+  .card-image-desktop {
+    display: block;
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    position: relative;
     -webkit-transform: translateX(-4rem);
             transform: translateX(-4rem);
+  }
+  .card-image-mobile {
+    display: none;
+  }
+  .card-text {
+    padding-top: 0;
   }
 }
 
