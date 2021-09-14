@@ -13,12 +13,12 @@ $divider-blue: hsl(240, 5%, 91%);
 }
 
 html {
-  // font-size: 62.5%;
   font-size: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  // font-size: 1.6rem;
   min-height: 100vh;
   margin: 0;
   padding: 10rem 1rem;
@@ -27,15 +27,17 @@ body {
 }
 
 .card {
+  padding: 0 1.5rem 2.8rem 1.5rem;
   background: #ffffff;
   border-radius: 2rem;
-  max-width: 56rem;
+  max-width: 60rem;
   background-image: url('../images/bg-pattern-mobile.svg');
   background-repeat: no-repeat;
   background-position: center 0%;
   background-size: 15rem;
 }
 
+// Illustration
 .card-box {
   display: none;
 }
@@ -50,19 +52,80 @@ body {
 
 .card-image-mobile {
   position: absolute;
-  top: -6.2rem;
+  top: -6.6rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-55%);
   display: block;
   width: 100%;
-  max-width: 15rem;
+  max-width: 16rem;
   height: auto;
 }
 
+// Card content
 .card-text {
   padding-top: 7rem;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 
+.accordion-item {
+  border-bottom: 1px solid $divider-blue;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.accordion-question {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  text-align: left;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  color: $text-blue;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: auto;
+    background: url('../images/icon-arrow-down.svg');
+    background-size: 0.75rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    transform: rotate(-180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.accordion-collapse {
+  font-size: 0.75rem;
+  color: $text-dkblue;
+  padding-bottom: 1rem;
+}
+
+.accordion-item:not(.show) {
+  .accordion-question {
+    color: $text-dkblue;
+
+    &:after {
+      transform: rotate(0);
+    }
+  }
+
+  .accordion-collapse {
+    display: none;
+  }
+}
+
+// Desktop view
 @media (min-width: 56em) {
   body {
     padding: 10rem;
@@ -72,18 +135,21 @@ body {
     position: relative;
     display: flex;
     margin: 0 auto;
+    padding-left: 0;
     padding-right: 2rem;
+    padding: 3rem 2rem 3rem 0;
     background-image: url('../images/bg-pattern-desktop.svg');
     background-size: 45%;
     background-position: -13% center;
   }
 
   .card-box {
+    width: 20%;
     display: block;
     position: absolute;
     left: 0;
-    top: 56%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 60%;
+    transform: translateX(-60%) translateY(-50%);
     z-index: 1;
   }
 
@@ -113,6 +179,10 @@ body {
 
   .card-text {
     padding-top: 0;
+
+    h1 {
+      text-align: left;
+    }
   }
 }
 
