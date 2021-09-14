@@ -109,6 +109,7 @@ body {
   font-size: 0.75rem;
   color: $text-dkblue;
   padding-bottom: 1rem;
+  transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
 }
 
 .accordion-item:not(.show) {
@@ -121,7 +122,12 @@ body {
   }
 
   .accordion-collapse {
-    display: none;
+    font-size: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s,
+      padding 0.5s 0.25s;
   }
 }
 
