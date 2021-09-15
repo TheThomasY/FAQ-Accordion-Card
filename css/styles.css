@@ -109,8 +109,8 @@ body {
   font-size: 0.75rem;
   color: #787887;
   padding-bottom: 1rem;
-  -webkit-transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
-  transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+  -webkit-transition: font-size 0.25s, padding 0.25s, opacity 0.5s 0.25s;
+  transition: font-size 0.25s, padding 0.25s, opacity 0.5s 0.25s;
 }
 
 .accordion-item:not(.show) .accordion-question {
@@ -125,11 +125,10 @@ body {
 
 .accordion-item:not(.show) .accordion-collapse {
   font-size: 0;
-  margin: 0;
   opacity: 0;
   padding: 0;
-  -webkit-transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s, padding 0.5s 0.25s;
-  transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s, padding 0.5s 0.25s;
+  -webkit-transition: opacity 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
+  transition: opacity 0.25s, font-size 0.5s 0.25s, padding 0.5s 0.25s;
 }
 
 .accordion-content {
@@ -203,6 +202,7 @@ body {
 }
 
 .attribution {
+  margin-top: 2rem;
   font-size: 11px;
   text-align: center;
 }
