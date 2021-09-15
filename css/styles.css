@@ -61,6 +61,7 @@ body {
 
 .card-text h1 {
   font-size: 2rem;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -114,6 +115,7 @@ body {
 
 .accordion-item:not(.show) .accordion-question {
   color: #787887;
+  font-weight: 400;
 }
 
 .accordion-item:not(.show) .accordion-question:after {
@@ -130,6 +132,10 @@ body {
   transition: opacity 0.25s, font-size 0.5s 0.25s, margin 0.5s 0.25s, padding 0.5s 0.25s;
 }
 
+.accordion-content {
+  padding-right: 1.5rem;
+}
+
 @media (min-width: 56em) {
   body {
     padding: 10rem;
@@ -140,9 +146,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 2rem;
-    padding: 3rem 2rem 3rem 0;
+    padding: 3rem 2rem 4rem 0;
     background-image: url("../images/bg-pattern-desktop.svg");
     background-size: 45%;
     background-position: -13% center;
@@ -152,9 +156,9 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    top: 60%;
-    -webkit-transform: translateX(-60%) translateY(-50%);
-            transform: translateX(-60%) translateY(-50%);
+    top: 58%;
+    -webkit-transform: translateX(-65%) translateY(-50%);
+            transform: translateX(-65%) translateY(-50%);
     z-index: 1;
   }
   .card-image,
@@ -189,6 +193,12 @@ body {
   }
   .card-text h1 {
     text-align: left;
+  }
+  .accordion-question {
+    font-size: 1rem;
+  }
+  .accordion-collapse {
+    font-size: 0.875rem;
   }
 }
 

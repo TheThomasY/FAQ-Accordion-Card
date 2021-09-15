@@ -67,6 +67,7 @@ body {
 
   h1 {
     font-size: 2rem;
+    font-weight: 700;
     text-align: center;
   }
 }
@@ -115,6 +116,7 @@ body {
 .accordion-item:not(.show) {
   .accordion-question {
     color: $text-dkblue;
+    font-weight: 400;
 
     &:after {
       transform: rotate(0);
@@ -131,6 +133,10 @@ body {
   }
 }
 
+.accordion-content {
+  padding-right: 1.5rem;
+}
+
 // Desktop view
 @media (min-width: 56em) {
   body {
@@ -141,9 +147,7 @@ body {
     position: relative;
     display: flex;
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 2rem;
-    padding: 3rem 2rem 3rem 0;
+    padding: 3rem 2rem 4rem 0;
     background-image: url('../images/bg-pattern-desktop.svg');
     background-size: 45%;
     background-position: -13% center;
@@ -154,8 +158,8 @@ body {
     display: block;
     position: absolute;
     left: 0;
-    top: 60%;
-    transform: translateX(-60%) translateY(-50%);
+    top: 58%;
+    transform: translateX(-65%) translateY(-50%);
     z-index: 1;
   }
 
@@ -189,6 +193,14 @@ body {
     h1 {
       text-align: left;
     }
+  }
+
+  .accordion-question {
+    font-size: 1rem;
+  }
+
+  .accordion-collapse {
+    font-size: 0.875rem;
   }
 }
 
