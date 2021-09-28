@@ -34,6 +34,7 @@ Styling the image was very tricky, this video by [Coder Coder](https://www.youtu
 - SASS
 - Flexbox
 - Mobile-first workflow
+- JS
 
 ## Author
 
